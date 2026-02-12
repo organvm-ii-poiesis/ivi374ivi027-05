@@ -47,7 +47,7 @@ vi.mock("@/components/system/console", () => ({
 
 // Mock @react-three/xr
 vi.mock("@react-three/xr", () => ({
-  XR: ({ children }: any) => <>{children}</>,
+  XR: ({ children }: { children: React.ReactNode }) => <>{children}</>,
   createXRStore: () => ({ enterVR: vi.fn(), enterAR: vi.fn() }),
   VRButton: () => <button>VR</button>,
   ARButton: () => <button>AR</button>

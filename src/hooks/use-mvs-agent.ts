@@ -11,10 +11,11 @@ type MVSMood = "Observant" | "Glitchy" | "Bored" | "Helpful";
  */
 export function useMVSAgent() {
   const [mood, setMood] = useState<MVSMood>("Observant");
-  const idleTimer = useRef<NodeJS.Timeout | null>(null);
-  const lastActivity = useRef<number>(Date.now());
+  const lastActivity = useRef<number>(0);
 
   useEffect(() => {
+    lastActivity.current = Date.now();
+
     const handleActivity = () => {
       lastActivity.current = Date.now();
       if (mood === "Bored") {
