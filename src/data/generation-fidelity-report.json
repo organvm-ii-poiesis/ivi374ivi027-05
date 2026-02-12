@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-02-12T10:38:33.487Z",
+  "overallFidelity": "40.24%",
+  "comparison": [
+    {
+      "name": "Avg Sentence Length",
+      "base": 17.369543641866645,
+      "synth": 29.666666666666668,
+      "accuracy": 29.20295847520326
+    },
+    {
+      "name": "Fragmentation Score",
+      "base": 53.9430564914048,
+      "synth": 33.70786516853933,
+      "accuracy": 62.48786657817635
+    },
+    {
+      "name": "Caps Ratio",
+      "base": 0.06370897698977337,
+      "synth": 0.3153232949512843,
+      "accuracy": 0
+    },
+    {
+      "name": "Symbol Density",
+      "base": 0.07670773563912205,
+      "synth": 0.053144375553587246,
+      "accuracy": 69.28163777850177
+    }
+  ],
+  "syntheticStats": {
+    "entityRegistry": {
+      "@PYGMALION": 1
+    },
+    "vocabularySize": 124,
+    "avgSentenceLength": 29.666666666666668,
+    "fragmentationScore": 33.70786516853933,
+    "glitchPatterns": {
+      "capsLockRatio": 0.3153232949512843,
+      "symbolDensity": 0.053144375553587246
+    }
+  }
+}

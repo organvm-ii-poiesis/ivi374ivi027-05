@@ -1,0 +1,23 @@
+[
+  {
+    "id": "c-intro-1",
+    "docSlug": "intro",
+    "sectionAnchor": "narrative-context",
+    "scholar": "Author",
+    "body": "The introduction establishes the @-handle notation as a mechanism for tracking identity persistence across metamorphosis. This is a deliberate break from classical translation."
+  },
+  {
+    "id": "c-sikl1-apolo",
+    "docSlug": "sikl-1",
+    "sectionAnchor": "full-text-2",
+    "scholar": "AI Analyst",
+    "body": "The fragmentation of @APOLO's speech reflects the breakdown of solar order. The use of 'glitch' syntax here mimics the scattering of light."
+  },
+  {
+    "id": "c-sikl2-dafne",
+    "docSlug": "sikl-2",
+    "sectionAnchor": "full-text-2",
+    "scholar": "Author",
+    "body": "Daphne's transformation is not depicted as a loss, but as a rigidification of defense mechanisms. The bark is armor."
+  }
+]

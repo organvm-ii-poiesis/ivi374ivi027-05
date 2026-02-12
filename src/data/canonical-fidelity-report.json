@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-02-12T13:31:54.535Z",
+  "thresholdRatio": 0.08,
+  "failingDocs": [],
+  "docs": [
+    {
+      "slug": "preliminary-pages",
+      "title": "Preliminary Pages",
+      "extractedWordCount": 140,
+      "sourceWordCount": 140,
+      "absoluteDelta": 0,
+      "ratio": 0,
+      "topSuspiciousSpans": []
+    },
+    {
+      "slug": "intro",
+      "title": "Intro",
+      "extractedWordCount": 6435,
+      "sourceWordCount": 6445,
+      "absoluteDelta": 10,
+      "ratio": 0.0015515903801396431,
+      "topSuspiciousSpans": [
+        "Isolated page number-like token: \"1\"",
+        "Isolated page number-like token: \"2\"",
+        "Isolated page number-like token: \"3\"",
+        "Isolated page number-like token: \"4\"",
+        "Isolated page number-like token: \"5\""
+      ]
+    },
+    {
+      "slug": "sikl-1",
+      "title": "Sikl 1",
+      "extractedWordCount": 1208,
+      "sourceWordCount": 1208,
+      "absoluteDelta": 0,
+      "ratio": 0,
+      "topSuspiciousSpans": [
+        "Stylized marker: \"|| @MVS || KONSOL ||\"",
+        "Stylized marker: \"#L A N D ; #AR ; #A KWA ; #HEV EN\"",
+        "Stylized marker: \"; # B E LO ; #HOM ; #AWA ; ]\"",
+        "Stylized marker: \"||@MVS || KONSOL ||\"",
+        "Stylized marker: \"|| @JOV || KONSOL ||\""
+      ]
+    },
+    {
+      "slug": "sikl-2",
+      "title": "Sikl 2",
+      "extractedWordCount": 3792,
+      "sourceWordCount": 3792,
+      "absoluteDelta": 0,
+      "ratio": 0,
+      "topSuspiciousSpans": [
+        "Isolated page number-like token: \"53\"",
+        "Isolated page number-like token: \"54\"",
+        "Stylized marker: \"@DAFNE b el ferst nimf fer hom\"",
+        "Isolated page number-like token: \"55\"",
+        "Stylized marker: \"@DAFNE\""
+      ]
+    },
+    {
+      "slug": "sikl-3",
+      "title": "Sikl 3",
+      "extractedWordCount": 3354,
+      "sourceWordCount": 3361,
+      "absoluteDelta": 7,
+      "ratio": 0.0020827134781315083,
+      "topSuspiciousSpans": [
+        "Stylized marker: \"no w . w elko m #HOM ! lips t glas , tips t\"",
+        "Stylized marker: \"5 u sr t #HOM @ KADMVS ]\"",
+        "Stylized marker: \"@APOLO ego b sertan , a kid born so\"",
+        "Stylized marker: \"@NARSISVS , fres fas n tit lik ston , ego\"",
+        "Stylized marker: \"@NARSISVS\""
+      ]
+    },
+    {
+      "slug": "bibliography",
+      "title": "Bibliography",
+      "extractedWordCount": 197,
+      "sourceWordCount": 197,
+      "absoluteDelta": 0,
+      "ratio": 0,
+      "topSuspiciousSpans": []
+    }
+  ]
+}

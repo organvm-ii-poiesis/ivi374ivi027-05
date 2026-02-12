@@ -1,0 +1,186 @@
+[
+  {
+    "id": "feed-preliminary-pages-1",
+    "timestampOrder": 1,
+    "nodeId": "@MET4",
+    "contentRef": "preliminary-pages#full-text",
+    "mediaRefs": [],
+    "tags": [
+      "preliminary-pages",
+      "full-text"
+    ]
+  },
+  {
+    "id": "feed-preliminary-pages-2",
+    "timestampOrder": 2,
+    "nodeId": "@MET4",
+    "contentRef": "preliminary-pages#full-text-2",
+    "mediaRefs": [],
+    "tags": [
+      "preliminary-pages",
+      "full-text-2"
+    ]
+  },
+  {
+    "id": "feed-intro-3",
+    "timestampOrder": 3,
+    "nodeId": "@MET4",
+    "contentRef": "intro#full-text",
+    "mediaRefs": [],
+    "tags": [
+      "intro",
+      "full-text"
+    ]
+  },
+  {
+    "id": "feed-intro-4",
+    "timestampOrder": 4,
+    "nodeId": "@MET4",
+    "contentRef": "intro#full-text-2",
+    "mediaRefs": [],
+    "tags": [
+      "intro",
+      "full-text-2"
+    ]
+  },
+  {
+    "id": "feed-intro-5",
+    "timestampOrder": 5,
+    "nodeId": "@MET4",
+    "contentRef": "intro#intro",
+    "mediaRefs": [],
+    "tags": [
+      "intro",
+      "intro"
+    ]
+  },
+  {
+    "id": "feed-intro-6",
+    "timestampOrder": 6,
+    "nodeId": "@MET4",
+    "contentRef": "intro#where-it-starts",
+    "mediaRefs": [],
+    "tags": [
+      "intro",
+      "where-it-starts"
+    ]
+  },
+  {
+    "id": "feed-intro-7",
+    "timestampOrder": 7,
+    "nodeId": "@MVS",
+    "contentRef": "intro#narrative-context",
+    "mediaRefs": [],
+    "tags": [
+      "intro",
+      "narrative-context",
+      "@MVS",
+      "@ANON"
+    ]
+  },
+  {
+    "id": "feed-intro-8",
+    "timestampOrder": 8,
+    "nodeId": "@MET4",
+    "contentRef": "intro#moving-forwardlooking-back",
+    "mediaRefs": [],
+    "tags": [
+      "intro",
+      "moving-forwardlooking-back"
+    ]
+  },
+  {
+    "id": "feed-sikl-1-9",
+    "timestampOrder": 9,
+    "nodeId": "@MET4",
+    "contentRef": "sikl-1#full-text",
+    "mediaRefs": [],
+    "tags": [
+      "sikl-1",
+      "full-text"
+    ]
+  },
+  {
+    "id": "feed-sikl-1-10",
+    "timestampOrder": 10,
+    "nodeId": "@MVS",
+    "contentRef": "sikl-1#full-text-2",
+    "mediaRefs": [],
+    "tags": [
+      "sikl-1",
+      "full-text-2",
+      "@MVS",
+      "@JOV"
+    ]
+  },
+  {
+    "id": "feed-sikl-2-11",
+    "timestampOrder": 11,
+    "nodeId": "@MET4",
+    "contentRef": "sikl-2#full-text",
+    "mediaRefs": [],
+    "tags": [
+      "sikl-2",
+      "full-text"
+    ]
+  },
+  {
+    "id": "feed-sikl-2-12",
+    "timestampOrder": 12,
+    "nodeId": "@DAFNE",
+    "contentRef": "sikl-2#full-text-2",
+    "mediaRefs": [],
+    "tags": [
+      "sikl-2",
+      "full-text-2",
+      "@DAFNE",
+      "@APOLO"
+    ]
+  },
+  {
+    "id": "feed-sikl-3-13",
+    "timestampOrder": 13,
+    "nodeId": "@MET4",
+    "contentRef": "sikl-3#full-text",
+    "mediaRefs": [],
+    "tags": [
+      "sikl-3",
+      "full-text"
+    ]
+  },
+  {
+    "id": "feed-sikl-3-14",
+    "timestampOrder": 14,
+    "nodeId": "@APOLO",
+    "contentRef": "sikl-3#full-text-2",
+    "mediaRefs": [],
+    "tags": [
+      "sikl-3",
+      "full-text-2",
+      "@APOLO",
+      "@NARSISVS"
+    ]
+  },
+  {
+    "id": "feed-bibliography-15",
+    "timestampOrder": 15,
+    "nodeId": "@MET4",
+    "contentRef": "bibliography#full-text",
+    "mediaRefs": [],
+    "tags": [
+      "bibliography",
+      "full-text"
+    ]
+  },
+  {
+    "id": "feed-bibliography-16",
+    "timestampOrder": 16,
+    "nodeId": "@MET4",
+    "contentRef": "bibliography#full-text-2",
+    "mediaRefs": [],
+    "tags": [
+      "bibliography",
+      "full-text-2"
+    ]
+  }
+]

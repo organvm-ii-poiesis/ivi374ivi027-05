@@ -1,0 +1,29 @@
+{
+  "entityRegistry": {
+    "@MVS": 20,
+    "@ANON": 3,
+    "@JOV": 1,
+    "@DUKALON": 6,
+    "@APOLO": 6,
+    "@DAFNE": 3,
+    "@INAKVS": 1,
+    "@ARGVS": 2,
+    "@IO": 1,
+    "@DIANA": 1,
+    "@H": 1,
+    "@NEPTVN": 2,
+    "@NARSISVS": 5,
+    "@EKO": 4,
+    "@BAKVS": 1,
+    "@ASOTES": 3,
+    "@ARSIPE": 10,
+    "@VENVS": 1
+  },
+  "vocabularySize": 5365,
+  "avgSentenceLength": 17.369543641866645,
+  "fragmentationScore": 53.9430564914048,
+  "glitchPatterns": {
+    "capsLockRatio": 0.06370897698977337,
+    "symbolDensity": 0.07670773563912205
+  }
+}

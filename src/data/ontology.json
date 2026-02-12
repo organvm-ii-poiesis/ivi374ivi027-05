@@ -1,0 +1,40 @@
+{
+  "categories": {
+    "avian": { "label": "Avian", "color": "#42d3b9", "description": "Transformation into birds or winged entities." },
+    "floral": { "label": "Floral", "color": "#42d3b9", "description": "Metamorphosis into flowers or plant life." },
+    "mineral": { "label": "Mineral", "color": "#b7c5bd", "description": "Transformation into stone, gems, or earth." },
+    "divine": { "label": "Divine", "color": "#f9d56e", "description": "Apotheosis or divine manifestations." },
+    "aquatic": { "label": "Aquatic", "color": "#42a5f5", "description": "Transformation into water or marine life." },
+    "mammalian": { "label": "Mammalian", "color": "#ff7b42", "description": "Metamorphosis into animals or bestial forms." },
+    "stellar": { "label": "Stellar", "color": "#e1bee7", "description": "Transformation into celestial bodies or constellations." },
+    "arboreal": { "label": "Arboreal", "color": "#66bb6a", "description": "Metamorphosis into trees or wood." }
+  },
+  "mappings": {
+    "@APOLO": "divine",
+    "@DAFNE": "arboreal",
+    "@JOV": "divine",
+    "@DUKALON": "mineral",
+    "@IO": "mammalian",
+    "@NARSISVS": "floral",
+    "@EKO": "mineral",
+    "@ARACHNE": "mammalian",
+    "@PROSERPINE": "divine",
+    "@CYGNUS": "avian",
+    "@CAESAR": "stellar",
+    "@ALCYONE": "avian",
+    "@PHILOMELA": "avian",
+    "@PROGNE": "avian",
+    "@TEREUS": "avian",
+    "@BYBLIS": "aquatic",
+    "@ARETHUSA": "aquatic",
+    "@SCYLLA": "avian",
+    "@MYRRHA": "arboreal",
+    "@HYACINTH": "floral",
+    "@ADONIS": "floral",
+    "@ATLAS": "mineral",
+    "@NIOBE": "mineral",
+    "@LYCAON": "mammalian",
+    "@CALLISTO": "mammalian",
+    "@ACTAEON": "mammalian"
+  }
+}

@@ -1,0 +1,765 @@
+[
+  {
+    "id": "artifact-2017-05-04-met4--profils-numbers",
+    "path": "/mirror/2017-05-04-met4-@profils.numbers",
+    "filename": "2017-05-04-met4-@profils.numbers",
+    "type": "document"
+  },
+  {
+    "id": "artifact-Hermaphroditus-pdf",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/Hermaphroditus.pdf",
+    "filename": "Hermaphroditus.pdf",
+    "type": "document",
+    "associatedNode": "@HERMAFRODITVS"
+  },
+  {
+    "id": "artifact-preview-micro-jpg",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/MET4MORPHOSES OLD.pages/preview-micro.jpg",
+    "filename": "preview-micro.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-web-jpg",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/MET4MORPHOSES OLD.pages/preview-web.jpg",
+    "filename": "preview-web.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-jpg",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/MET4MORPHOSES OLD.pages/preview.jpg",
+    "filename": "preview.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-micro-jpg",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/Perseus.pages/preview-micro.jpg",
+    "filename": "preview-micro.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-web-jpg",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/Perseus.pages/preview-web.jpg",
+    "filename": "preview-web.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-jpg",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/Perseus.pages/preview.jpg",
+    "filename": "preview.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-Perseus-pdf",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/Perseus.pdf",
+    "filename": "Perseus.pdf",
+    "type": "document",
+    "associatedNode": "@PERSEVS"
+  },
+  {
+    "id": "artifact-preview-micro-jpg",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/Pyramus & Thisbe.pages/preview-micro.jpg",
+    "filename": "preview-micro.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-web-jpg",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/Pyramus & Thisbe.pages/preview-web.jpg",
+    "filename": "preview-web.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-jpg",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/Pyramus & Thisbe.pages/preview.jpg",
+    "filename": "preview.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-Tiresias-pdf",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/Tiresias.pdf",
+    "filename": "Tiresias.pdf",
+    "type": "document",
+    "associatedNode": "@TIRESIAS"
+  },
+  {
+    "id": "artifact-apollo---daphne-pdf",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/apollo-&-daphne.pdf",
+    "filename": "apollo-&-daphne.pdf",
+    "type": "document",
+    "associatedNode": "@APOLO"
+  },
+  {
+    "id": "artifact-athamas---ino-pdf",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/athamas-&-ino.pdf",
+    "filename": "athamas-&-ino.pdf",
+    "type": "document",
+    "associatedNode": "@ATHAMAS"
+  },
+  {
+    "id": "artifact-helios---leucothoe-pdf",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/helios-&-leucothoe.pdf",
+    "filename": "helios-&-leucothoe.pdf",
+    "type": "document",
+    "associatedNode": "@HELIOS"
+  },
+  {
+    "id": "artifact-met4-style-sheet---glossary-pdf",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/met4-style-sheet-:-glossary.pdf",
+    "filename": "met4-style-sheet-:-glossary.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-minerva---the-muses-pages",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/minerva-&-the-muses.pages",
+    "filename": "minerva-&-the-muses.pages",
+    "type": "document",
+    "associatedNode": "@MINERVA"
+  },
+  {
+    "id": "artifact-minerva---the-muses-pdf",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/minerva-&-the-muses.pdf",
+    "filename": "minerva-&-the-muses.pdf",
+    "type": "document",
+    "associatedNode": "@MINERVA"
+  },
+  {
+    "id": "artifact-narcissus---echo-re-dux-pdf",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/narcissus-&-echo-re-dux.pdf",
+    "filename": "narcissus-&-echo-re-dux.pdf",
+    "type": "document",
+    "associatedNode": "@NARSISVS"
+  },
+  {
+    "id": "artifact-revised-venus---mars-pdf",
+    "path": "/mirror/2017-05-08 - met4 - older versions '14 to '16/revised-venus-&-mars.pdf",
+    "filename": "revised-venus-&-mars.pdf",
+    "type": "document",
+    "associatedNode": "@VENVS"
+  },
+  {
+    "id": "artifact-2017-05-08-met4-potential-ads-and-mvs-narratives-from-notes-00-pages",
+    "path": "/mirror/2017-05-08-met4-potential-ads-and-mvs-narratives-from-notes-00.pages",
+    "filename": "2017-05-08-met4-potential-ads-and-mvs-narratives-from-notes-00.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-05-30-met4-ovid-metamorphoses-structure-00-numbers",
+    "path": "/mirror/2017-05-30-met4-ovid-metamorphoses-structure-00.numbers",
+    "filename": "2017-05-30-met4-ovid-metamorphoses-structure-00.numbers",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-05-31-met4-narrative-calendar-00-numbers",
+    "path": "/mirror/2017-05-31-met4-narrative-calendar-00.numbers",
+    "filename": "2017-05-31-met4-narrative-calendar-00.numbers",
+    "type": "document"
+  },
+  {
+    "id": "artifact--cre4tvs----repli---login-pdf",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/#cre4tvs-:-#repli-:-login.pdf",
+    "filename": "#cre4tvs-:-#repli-:-login.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-preview-micro-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@ATHAMAS & @INO .pages/preview-micro.jpg",
+    "filename": "preview-micro.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-web-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@ATHAMAS & @INO .pages/preview-web.jpg",
+    "filename": "preview-web.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@ATHAMAS & @INO .pages/preview.jpg",
+    "filename": "preview.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact--FAETON-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@FAETON.pages",
+    "filename": "@FAETON.pages",
+    "type": "document",
+    "associatedNode": "@FAETON"
+  },
+  {
+    "id": "artifact-preview-micro-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@HELIOS & @LUCOTHO.pages/preview-micro.jpg",
+    "filename": "preview-micro.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-web-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@HELIOS & @LUCOTHO.pages/preview-web.jpg",
+    "filename": "preview-web.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@HELIOS & @LUCOTHO.pages/preview.jpg",
+    "filename": "preview.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-micro-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@HERMAFRODITVS & @SALMACIS.pages/preview-micro.jpg",
+    "filename": "preview-micro.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-web-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@HERMAFRODITVS & @SALMACIS.pages/preview-web.jpg",
+    "filename": "preview-web.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@HERMAFRODITVS & @SALMACIS.pages/preview.jpg",
+    "filename": "preview.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact--IO-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@IO.pages",
+    "filename": "@IO.pages",
+    "type": "document",
+    "associatedNode": "@IO"
+  },
+  {
+    "id": "artifact--KADMVS-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@KADMVS.pages",
+    "filename": "@KADMVS.pages",
+    "type": "document",
+    "associatedNode": "@KADMVS"
+  },
+  {
+    "id": "artifact--KALISTO-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@KALISTO.pages",
+    "filename": "@KALISTO.pages",
+    "type": "document",
+    "associatedNode": "@KALISTO"
+  },
+  {
+    "id": "artifact--MERCVREE-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@MERCVREE.pages",
+    "filename": "@MERCVREE.pages",
+    "type": "document",
+    "associatedNode": "@MERCVREE"
+  },
+  {
+    "id": "artifact--PERSEVS-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@PERSEVS.pages",
+    "filename": "@PERSEVS.pages",
+    "type": "document",
+    "associatedNode": "@PERSEVS"
+  },
+  {
+    "id": "artifact--PROFILS-numbers",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@PROFILS.numbers",
+    "filename": "@PROFILS.numbers",
+    "type": "document",
+    "associatedNode": "@PROFILS"
+  },
+  {
+    "id": "artifact--PROFILS-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@PROFILS.pages",
+    "filename": "@PROFILS.pages",
+    "type": "document",
+    "associatedNode": "@PROFILS"
+  },
+  {
+    "id": "artifact--RAVEN-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@RAVEN.pages",
+    "filename": "@RAVEN.pages",
+    "type": "document",
+    "associatedNode": "@RAVEN"
+  },
+  {
+    "id": "artifact--SEMELE-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@SEMELE.pages",
+    "filename": "@SEMELE.pages",
+    "type": "document",
+    "associatedNode": "@SEMELE"
+  },
+  {
+    "id": "artifact--TIRESIAS-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@TIRESIAS.pages",
+    "filename": "@TIRESIAS.pages",
+    "type": "document",
+    "associatedNode": "@TIRESIAS"
+  },
+  {
+    "id": "artifact--TIRESIAS-pdf",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@TIRESIAS.pdf",
+    "filename": "@TIRESIAS.pdf",
+    "type": "document",
+    "associatedNode": "@TIRESIAS"
+  },
+  {
+    "id": "artifact-preview-micro-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@VENVS & @MARS .pages/preview-micro.jpg",
+    "filename": "preview-micro.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-web-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@VENVS & @MARS .pages/preview-web.jpg",
+    "filename": "preview-web.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@VENVS & @MARS .pages/preview.jpg",
+    "filename": "preview.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact--apollo----daphne-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@apollo-&-@daphne.pages",
+    "filename": "@apollo-&-@daphne.pages",
+    "type": "document",
+    "associatedNode": "@APOLO"
+  },
+  {
+    "id": "artifact--apollo----daphne-pdf",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@apollo-&-@daphne.pdf",
+    "filename": "@apollo-&-@daphne.pdf",
+    "type": "document",
+    "associatedNode": "@APOLO"
+  },
+  {
+    "id": "artifact--athamas----ino-pdf",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@athamas-&-@ino.pdf",
+    "filename": "@athamas-&-@ino.pdf",
+    "type": "document",
+    "associatedNode": "@ATHAMAS"
+  },
+  {
+    "id": "artifact--helios----lucotho-pdf",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@helios-&-@lucotho.pdf",
+    "filename": "@helios-&-@lucotho.pdf",
+    "type": "document",
+    "associatedNode": "@HELIOS"
+  },
+  {
+    "id": "artifact--hermafroditvs----salmacis-pdf",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@hermafroditvs-&-@salmacis.pdf",
+    "filename": "@hermafroditvs-&-@salmacis.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact--minerva----mvs-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@minerva-&-@mvs.pages",
+    "filename": "@minerva-&-@mvs.pages",
+    "type": "document",
+    "associatedNode": "@MINERVA"
+  },
+  {
+    "id": "artifact--minerva----mvs-pdf",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@minerva-&-@mvs.pdf",
+    "filename": "@minerva-&-@mvs.pdf",
+    "type": "document",
+    "associatedNode": "@MINERVA"
+  },
+  {
+    "id": "artifact--narsisvs----eko-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@narsisvs-&-@eko.pages",
+    "filename": "@narsisvs-&-@eko.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact--narsisvs----eko-pdf",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@narsisvs-&-@eko.pdf",
+    "filename": "@narsisvs-&-@eko.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact--penthevs----bakvs-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@penthevs-&-@bakvs.pages",
+    "filename": "@penthevs-&-@bakvs.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact--penthevs----bakvs-pdf",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@penthevs-&-@bakvs.pdf",
+    "filename": "@penthevs-&-@bakvs.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact--venvs----mars-pdf",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/@venvs-&-@mars.pdf",
+    "filename": "@venvs-&-@mars.pdf",
+    "type": "document",
+    "associatedNode": "@MARS"
+  },
+  {
+    "id": "artifact-INTRO-pages",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/INTRO.pages",
+    "filename": "INTRO.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-preview-micro-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/STYL : GLOS : LANG.pages/preview-micro.jpg",
+    "filename": "preview-micro.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-web-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/STYL : GLOS : LANG.pages/preview-web.jpg",
+    "filename": "preview-web.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-jpg",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/STYL : GLOS : LANG.pages/preview.jpg",
+    "filename": "preview.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-met4-data-collection-numbers",
+    "path": "/mirror/2017-06-05 - met4 - may 2017 north carolina edits/met4-data-collection.numbers",
+    "filename": "met4-data-collection.numbers",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-12-met4-data-collection-01-pdf",
+    "path": "/mirror/2017-06-12-met4-data-collection-01.pdf",
+    "filename": "2017-06-12-met4-data-collection-01.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-12-met4-data-collection-numbers",
+    "path": "/mirror/2017-06-12-met4-data-collection.numbers",
+    "filename": "2017-06-12-met4-data-collection.numbers",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-12-met4-definitions---language-stylizations-01-numbers",
+    "path": "/mirror/2017-06-12-met4-definitions-:-language-stylizations-01.numbers",
+    "filename": "2017-06-12-met4-definitions-:-language-stylizations-01.numbers",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-12-met4-definitions---language-stylizations-01-pdf",
+    "path": "/mirror/2017-06-12-met4-definitions-:-language-stylizations-01.pdf",
+    "filename": "2017-06-12-met4-definitions-:-language-stylizations-01.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-12-met4-textual-layout---format-01-pages",
+    "path": "/mirror/2017-06-12-met4-textual-layout-:-format-01.pages",
+    "filename": "2017-06-12-met4-textual-layout-:-format-01.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-12-met4-textual-layout---format-01-pdf",
+    "path": "/mirror/2017-06-12-met4-textual-layout-:-format-01.pdf",
+    "filename": "2017-06-12-met4-textual-layout-:-format-01.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-preview-micro-jpg",
+    "path": "/mirror/2017-06-16 - met4 - sentence construction examples - 00.numbers/preview-micro.jpg",
+    "filename": "preview-micro.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-web-jpg",
+    "path": "/mirror/2017-06-16 - met4 - sentence construction examples - 00.numbers/preview-web.jpg",
+    "filename": "preview-web.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-preview-jpg",
+    "path": "/mirror/2017-06-16 - met4 - sentence construction examples - 00.numbers/preview.jpg",
+    "filename": "preview.jpg",
+    "type": "image"
+  },
+  {
+    "id": "artifact-2017-06-21-met4-intro-00-pages",
+    "path": "/mirror/2017-06-21-met4-intro-00.pages",
+    "filename": "2017-06-21-met4-intro-00.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-21-met4-intro-01-pdf",
+    "path": "/mirror/2017-06-21-met4-intro-01.pdf",
+    "filename": "2017-06-21-met4-intro-01.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-21-met4-journal---grant-submission-list-00-numbers",
+    "path": "/mirror/2017-06-21-met4-journal-:-grant-submission-list-00.numbers",
+    "filename": "2017-06-21-met4-journal-:-grant-submission-list-00.numbers",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-21-met4-journal---grant-submission-list-00-pdf",
+    "path": "/mirror/2017-06-21-met4-journal-:-grant-submission-list-00.pdf",
+    "filename": "2017-06-21-met4-journal-:-grant-submission-list-00.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-26-met4-first-draft-numbers",
+    "path": "/mirror/2017-06-26-met4-first-draft.numbers",
+    "filename": "2017-06-26-met4-first-draft.numbers",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-26-met4-text-index---variations-00-pdf",
+    "path": "/mirror/2017-06-26-met4-text-index-:-variations-00.pdf",
+    "filename": "2017-06-26-met4-text-index-:-variations-00.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-06-30-met4-thesis-compilation-for-becka-summer-2017-pdf",
+    "path": "/mirror/2017-06-30-met4-thesis-compilation-for-becka-summer-2017.pdf",
+    "filename": "2017-06-30-met4-thesis-compilation-for-becka-summer-2017.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-08-02-met4-textual-layout---format-pages",
+    "path": "/mirror/2017-08-02-met4-textual-layout-:-format.pages",
+    "filename": "2017-08-02-met4-textual-layout-:-format.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-08-15-met4-cycle-2-pages",
+    "path": "/mirror/2017-08-15-met4-cycle-2.pages",
+    "filename": "2017-08-15-met4-cycle-2.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-10-02-met4-intro-01-pdf",
+    "path": "/mirror/2017-10-02-met4-intro-01.pdf",
+    "filename": "2017-10-02-met4-intro-01.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-10-02-met4-intro-pages",
+    "path": "/mirror/2017-10-02-met4-intro.pages",
+    "filename": "2017-10-02-met4-intro.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-10-02-met4-met4morfoses-first-draft-pdf",
+    "path": "/mirror/2017-10-02-met4-met4morfoses-first-draft.pdf",
+    "filename": "2017-10-02-met4-met4morfoses-first-draft.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2017-11-23-met4morfoses-first-draft-compilation-pdf",
+    "path": "/mirror/2017-11-23-met4morfoses-first-draft-compilation.pdf",
+    "filename": "2017-11-23-met4morfoses-first-draft-compilation.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-02-met4-second-draft-numbers",
+    "path": "/mirror/2018-01-02-met4-second-draft.numbers",
+    "filename": "2018-01-02-met4-second-draft.numbers",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-10-met4-cycle-1-pdf",
+    "path": "/mirror/2018-01-10-met4-cycle-1.pdf",
+    "filename": "2018-01-10-met4-cycle-1.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-10-met4-cycle-2-pdf",
+    "path": "/mirror/2018-01-10-met4-cycle-2.pdf",
+    "filename": "2018-01-10-met4-cycle-2.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-10-met4-cycle-3-pdf",
+    "path": "/mirror/2018-01-10-met4-cycle-3.pdf",
+    "filename": "2018-01-10-met4-cycle-3.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-10-met4-intro-pages",
+    "path": "/mirror/2018-01-10-met4-intro.pages",
+    "filename": "2018-01-10-met4-intro.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-10-met4-intro-pdf",
+    "path": "/mirror/2018-01-10-met4-intro.pdf",
+    "filename": "2018-01-10-met4-intro.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-10-met4-second-draft-compiled-pdf",
+    "path": "/mirror/2018-01-10-met4-second-draft-compiled.pdf",
+    "filename": "2018-01-10-met4-second-draft-compiled.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-26-met4--profils-sikl-1-3-numbers",
+    "path": "/mirror/2018-01-26-met4-@profils-sikl-1-3.numbers",
+    "filename": "2018-01-26-met4-@profils-sikl-1-3.numbers",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-26-met4--profils-numbers",
+    "path": "/mirror/2018-01-26-met4-@profils.numbers",
+    "filename": "2018-01-26-met4-@profils.numbers",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-26-met4-intro-pages",
+    "path": "/mirror/2018-01-26-met4-intro.pages",
+    "filename": "2018-01-26-met4-intro.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-29-met4-cycle-1-pdf",
+    "path": "/mirror/2018-01-29-met4-cycle-1.pdf",
+    "filename": "2018-01-29-met4-cycle-1.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-29-met4-cycle-2-pdf",
+    "path": "/mirror/2018-01-29-met4-cycle-2.pdf",
+    "filename": "2018-01-29-met4-cycle-2.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-29-met4-cycle-3-pdf",
+    "path": "/mirror/2018-01-29-met4-cycle-3.pdf",
+    "filename": "2018-01-29-met4-cycle-3.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-29-met4-intro-pdf",
+    "path": "/mirror/2018-01-29-met4-intro.pdf",
+    "filename": "2018-01-29-met4-intro.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-29-met4-third-draft-compiled-pdf",
+    "path": "/mirror/2018-01-29-met4-third-draft-compiled.pdf",
+    "filename": "2018-01-29-met4-third-draft-compiled.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-31-met4-intro-pages",
+    "path": "/mirror/2018-01-31-met4-intro.pages",
+    "filename": "2018-01-31-met4-intro.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-01-31-met4-intro-pdf",
+    "path": "/mirror/2018-01-31-met4-intro.pdf",
+    "filename": "2018-01-31-met4-intro.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-02-14-met4-cycle-1-chapbook-submission-pages",
+    "path": "/mirror/2018-03-01 - met4 - chapbook submission/2018-02-14-met4-cycle-1-chapbook-submission.pages",
+    "filename": "2018-02-14-met4-cycle-1-chapbook-submission.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-02-14-met4-cycle-1-chapbook-submission-pdf",
+    "path": "/mirror/2018-03-01 - met4 - chapbook submission/2018-02-14-met4-cycle-1-chapbook-submission.pdf",
+    "filename": "2018-02-14-met4-cycle-1-chapbook-submission.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-02-14-met4-cycle-2-chapbook-submission-pages",
+    "path": "/mirror/2018-03-01 - met4 - chapbook submission/2018-02-14-met4-cycle-2-chapbook-submission.pages",
+    "filename": "2018-02-14-met4-cycle-2-chapbook-submission.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-02-14-met4-cycle-2-chapbook-submission-pdf",
+    "path": "/mirror/2018-03-01 - met4 - chapbook submission/2018-02-14-met4-cycle-2-chapbook-submission.pdf",
+    "filename": "2018-02-14-met4-cycle-2-chapbook-submission.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-02-14-met4-cycle-3-chapbook-submission-pages",
+    "path": "/mirror/2018-03-01 - met4 - chapbook submission/2018-02-14-met4-cycle-3-chapbook-submission.pages",
+    "filename": "2018-02-14-met4-cycle-3-chapbook-submission.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-02-14-met4-cycle-3-chapbook-submission-pdf",
+    "path": "/mirror/2018-03-01 - met4 - chapbook submission/2018-02-14-met4-cycle-3-chapbook-submission.pdf",
+    "filename": "2018-02-14-met4-cycle-3-chapbook-submission.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-met4morfoses-etceter4-pdf",
+    "path": "/mirror/2018-03-01 - met4 - chapbook submission/met4morfoses-etceter4.pdf",
+    "filename": "met4morfoses-etceter4.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-03-13-met4-preliminary-pages-pdf",
+    "path": "/mirror/2018-03-13-met4-preliminary-pages.pdf",
+    "filename": "2018-03-13-met4-preliminary-pages.pdf",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-03-20-met4-bibliography-pages",
+    "path": "/mirror/2018-03-20-met4-bibliography.pages",
+    "filename": "2018-03-20-met4-bibliography.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-03-20-met4-cycle-1-pages",
+    "path": "/mirror/2018-03-20-met4-cycle-1.pages",
+    "filename": "2018-03-20-met4-cycle-1.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-03-20-met4-cycle-2-pages",
+    "path": "/mirror/2018-03-20-met4-cycle-2.pages",
+    "filename": "2018-03-20-met4-cycle-2.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-03-20-met4-cycle-3-pages",
+    "path": "/mirror/2018-03-20-met4-cycle-3.pages",
+    "filename": "2018-03-20-met4-cycle-3.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-03-20-met4-intro-pages",
+    "path": "/mirror/2018-03-20-met4-intro.pages",
+    "filename": "2018-03-20-met4-intro.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact-2018-03-20-met4-preliminary-pages-pages",
+    "path": "/mirror/2018-03-20-met4-preliminary-pages.pages",
+    "filename": "2018-03-20-met4-preliminary-pages.pages",
+    "type": "document"
+  },
+  {
+    "id": "artifact--FETVN-pdf",
+    "path": "/mirror/@FETVN.pdf",
+    "filename": "@FETVN.pdf",
+    "type": "document",
+    "associatedNode": "@FETVN"
+  },
+  {
+    "id": "artifact--NARSISVS-pdf",
+    "path": "/mirror/@NARSISVS.pdf",
+    "filename": "@NARSISVS.pdf",
+    "type": "document",
+    "associatedNode": "@NARSISVS"
+  },
+  {
+    "id": "artifact-padavano-anthony-signature-page-pdf",
+    "path": "/mirror/padavano-anthony-signature-page.pdf",
+    "filename": "padavano-anthony-signature-page.pdf",
+    "type": "document"
+  }
+]

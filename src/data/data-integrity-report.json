@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-02-12T13:31:54.819Z",
+  "mirror": {
+    "totalAssets": 214,
+    "verifiedAssets": 214,
+    "checksumMismatches": [],
+    "unreadableFiles": [],
+    "badDownloadUrls": []
+  },
+  "invariants": {
+    "duplicateNodeIds": [],
+    "invalidNodeLinkedDocSlugs": [],
+    "invalidFeedContentRefs": [],
+    "processedContentMismatch": false
+  },
+  "ok": true
+}

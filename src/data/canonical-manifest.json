@@ -1,0 +1,62 @@
+[
+  {
+    "id": "canonical-preliminary-pages",
+    "slug": "preliminary-pages",
+    "title": "Preliminary Pages",
+    "order": 1,
+    "sourcePdf": "/mirror/2018-03-20 - met4 - sixth draft/2018-03-20-met4-preliminary-pages.pdf",
+    "markdownPath": "src/content/preliminary-pages.md",
+    "wordCount": 140,
+    "sections": []
+  },
+  {
+    "id": "canonical-intro",
+    "slug": "intro",
+    "title": "Intro",
+    "order": 2,
+    "sourcePdf": "/mirror/2018-03-20 - met4 - sixth draft/2018-03-20-met4-intro.pdf",
+    "markdownPath": "src/content/intro.md",
+    "wordCount": 6445,
+    "sections": []
+  },
+  {
+    "id": "canonical-sikl-1",
+    "slug": "sikl-1",
+    "title": "Sikl 1",
+    "order": 3,
+    "sourcePdf": "/mirror/2018-03-20 - met4 - sixth draft/2018-03-20-met4-cycle-1.pdf",
+    "markdownPath": "src/content/sikl-1.md",
+    "wordCount": 1208,
+    "sections": []
+  },
+  {
+    "id": "canonical-sikl-2",
+    "slug": "sikl-2",
+    "title": "Sikl 2",
+    "order": 4,
+    "sourcePdf": "/mirror/2018-03-20 - met4 - sixth draft/2018-03-20-met4-cycle-2.pdf",
+    "markdownPath": "src/content/sikl-2.md",
+    "wordCount": 3792,
+    "sections": []
+  },
+  {
+    "id": "canonical-sikl-3",
+    "slug": "sikl-3",
+    "title": "Sikl 3",
+    "order": 5,
+    "sourcePdf": "/mirror/2018-03-20 - met4 - sixth draft/2018-03-20-met4-cycle-3.pdf",
+    "markdownPath": "src/content/sikl-3.md",
+    "wordCount": 3361,
+    "sections": []
+  },
+  {
+    "id": "canonical-bibliography",
+    "slug": "bibliography",
+    "title": "Bibliography",
+    "order": 6,
+    "sourcePdf": "/mirror/2018-03-20 - met4 - sixth draft/2018-03-20-met4-bibliography.pdf",
+    "markdownPath": "src/content/bibliography.md",
+    "wordCount": 197,
+    "sections": []
+  }
+]

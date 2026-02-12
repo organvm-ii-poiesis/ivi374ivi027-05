@@ -1,0 +1,314 @@
+[
+  {
+    "id": "@APOLO",
+    "label": "@APOLO",
+    "theme": "divine",
+    "linkedDocSlugs": [
+      "sikl-1",
+      "sikl-2",
+      "sikl-3"
+    ],
+    "linkedSections": [
+      "sikl-1#full-text-2",
+      "sikl-2#full-text-2",
+      "sikl-3#full-text-2"
+    ],
+    "position": {
+      "x": 65,
+      "y": 50
+    },
+    "isTrending": true,
+    "viewCount": 271
+  },
+  {
+    "id": "@MVS",
+    "label": "@MVS",
+    "theme": "metamorphosis",
+    "linkedDocSlugs": [
+      "intro",
+      "sikl-1"
+    ],
+    "linkedSections": [
+      "intro#narrative-context",
+      "sikl-1#full-text-2"
+    ],
+    "position": {
+      "x": 66.599,
+      "y": 59.583
+    },
+    "isTrending": false,
+    "viewCount": 43
+  },
+  {
+    "id": "@ANON",
+    "label": "@ANON",
+    "theme": "metamorphosis",
+    "linkedDocSlugs": [
+      "intro"
+    ],
+    "linkedSections": [
+      "intro#narrative-context"
+    ],
+    "position": {
+      "x": 61.667,
+      "y": 70.207
+    },
+    "isTrending": false,
+    "viewCount": 47
+  },
+  {
+    "id": "@JOV",
+    "label": "@JOV",
+    "theme": "divine",
+    "linkedDocSlugs": [
+      "sikl-1"
+    ],
+    "linkedSections": [
+      "sikl-1#full-text-2"
+    ],
+    "position": {
+      "x": 50,
+      "y": 77.5
+    },
+    "isTrending": false,
+    "viewCount": 47
+  },
+  {
+    "id": "@DUKALON",
+    "label": "@DUKALON",
+    "theme": "mineral",
+    "linkedDocSlugs": [
+      "sikl-1"
+    ],
+    "linkedSections": [
+      "sikl-1#full-text-2"
+    ],
+    "position": {
+      "x": 34.167,
+      "y": 77.424
+    },
+    "isTrending": false,
+    "viewCount": 11
+  },
+  {
+    "id": "@DAFNE",
+    "label": "@DAFNE",
+    "theme": "arboreal",
+    "linkedDocSlugs": [
+      "sikl-2"
+    ],
+    "linkedSections": [
+      "sikl-2#full-text-2"
+    ],
+    "position": {
+      "x": 18.967,
+      "y": 67.917
+    },
+    "isTrending": true,
+    "viewCount": 443
+  },
+  {
+    "id": "@INAKVS",
+    "label": "@INAKVS",
+    "theme": "metamorphosis",
+    "linkedDocSlugs": [
+      "sikl-2"
+    ],
+    "linkedSections": [
+      "sikl-2#full-text-2"
+    ],
+    "position": {
+      "x": 10,
+      "y": 50
+    },
+    "isTrending": false,
+    "viewCount": 40
+  },
+  {
+    "id": "@ARGVS",
+    "label": "@ARGVS",
+    "theme": "metamorphosis",
+    "linkedDocSlugs": [
+      "sikl-2"
+    ],
+    "linkedSections": [
+      "sikl-2#full-text-2"
+    ],
+    "position": {
+      "x": 11.751,
+      "y": 27.917
+    },
+    "isTrending": false,
+    "viewCount": 38
+  },
+  {
+    "id": "@IO",
+    "label": "@IO",
+    "theme": "mammalian",
+    "linkedDocSlugs": [
+      "sikl-2"
+    ],
+    "linkedSections": [
+      "sikl-2#full-text-2"
+    ],
+    "position": {
+      "x": 25.833,
+      "y": 8.142
+    },
+    "isTrending": false,
+    "viewCount": 28
+  },
+  {
+    "id": "@DIANA",
+    "label": "@DIANA",
+    "theme": "metamorphosis",
+    "linkedDocSlugs": [
+      "sikl-2"
+    ],
+    "linkedSections": [
+      "sikl-2#full-text-2"
+    ],
+    "position": {
+      "x": 50,
+      "y": -2.5
+    },
+    "isTrending": false,
+    "viewCount": 0
+  },
+  {
+    "id": "@H",
+    "label": "@H",
+    "theme": "metamorphosis",
+    "linkedDocSlugs": [
+      "sikl-2"
+    ],
+    "linkedSections": [
+      "sikl-2#full-text-2"
+    ],
+    "position": {
+      "x": 78.333,
+      "y": 0.925
+    },
+    "isTrending": false,
+    "viewCount": 42
+  },
+  {
+    "id": "@NEPTVN",
+    "label": "@NEPTVN",
+    "theme": "metamorphosis",
+    "linkedDocSlugs": [
+      "sikl-2"
+    ],
+    "linkedSections": [
+      "sikl-2#full-text-2"
+    ],
+    "position": {
+      "x": 102.683,
+      "y": 19.583
+    },
+    "isTrending": false,
+    "viewCount": 49
+  },
+  {
+    "id": "@NARSISVS",
+    "label": "@NARSISVS",
+    "theme": "floral",
+    "linkedDocSlugs": [
+      "sikl-3"
+    ],
+    "linkedSections": [
+      "sikl-3#full-text-2"
+    ],
+    "position": {
+      "x": 115,
+      "y": 50
+    },
+    "isTrending": true,
+    "viewCount": 582
+  },
+  {
+    "id": "@EKO",
+    "label": "@EKO",
+    "theme": "mineral",
+    "linkedDocSlugs": [
+      "sikl-3"
+    ],
+    "linkedSections": [
+      "sikl-3#full-text-2"
+    ],
+    "position": {
+      "x": 109.9,
+      "y": 84.583
+    },
+    "isTrending": false,
+    "viewCount": 30
+  },
+  {
+    "id": "@BAKVS",
+    "label": "@BAKVS",
+    "theme": "metamorphosis",
+    "linkedDocSlugs": [
+      "sikl-3"
+    ],
+    "linkedSections": [
+      "sikl-3#full-text-2"
+    ],
+    "position": {
+      "x": 86.667,
+      "y": 113.509
+    },
+    "isTrending": false,
+    "viewCount": 6
+  },
+  {
+    "id": "@ASOTES",
+    "label": "@ASOTES",
+    "theme": "metamorphosis",
+    "linkedDocSlugs": [
+      "sikl-3"
+    ],
+    "linkedSections": [
+      "sikl-3#full-text-2"
+    ],
+    "position": {
+      "x": 50,
+      "y": 127.5
+    },
+    "isTrending": false,
+    "viewCount": 20
+  },
+  {
+    "id": "@ARSIPE",
+    "label": "@ARSIPE",
+    "theme": "metamorphosis",
+    "linkedDocSlugs": [
+      "sikl-3"
+    ],
+    "linkedSections": [
+      "sikl-3#full-text-2"
+    ],
+    "position": {
+      "x": 9.167,
+      "y": 120.725
+    },
+    "isTrending": false,
+    "viewCount": 22
+  },
+  {
+    "id": "@VENVS",
+    "label": "@VENVS",
+    "theme": "metamorphosis",
+    "linkedDocSlugs": [
+      "sikl-3"
+    ],
+    "linkedSections": [
+      "sikl-3#full-text-2"
+    ],
+    "position": {
+      "x": -24.334,
+      "y": 92.917
+    },
+    "isTrending": false,
+    "viewCount": 3
+  }
+]

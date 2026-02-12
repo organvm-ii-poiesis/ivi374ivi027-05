@@ -1,0 +1,102 @@
+[
+  {
+    "sikl": 4,
+    "book": 4,
+    "myths": [
+      { "id": "pyramus", "title": "Pyramus and Thisbe", "summary": "Tragic lovers separated by a wall, united in death beneath a mulberry tree." },
+      { "id": "hermaphroditus", "title": "Salmacis and @HERMAFRODITVS", "summary": "The merging of two bodies into a single, dual-natured form." },
+      { "id": "perseus", "title": "@PERSEVS and Andromeda", "summary": "Heroic rescue of a princess from a sea monster using the head of Medusa." }
+    ]
+  },
+  {
+    "sikl": 5,
+    "book": 5,
+    "myths": [
+      { "id": "proserpine", "title": "The Abduction of @PROSERPINE", "summary": "@PLVTO carries @PROSERPINE to the underworld, causing the seasons." },
+      { "id": "arethusa", "title": "@ARETHVSA and Alpheus", "summary": "A nymph transformed into a fountain to escape a persistent river god." }
+    ]
+  },
+  {
+    "sikl": 6,
+    "book": 6,
+    "myths": [
+      { "id": "arachne", "title": "@ARACHNE and @MINERVA", "summary": "A weaving contest leads to the transformation of a woman into a spider." },
+      { "id": "niobe", "title": "@NIOBE", "summary": "Pride leads to the loss of all children and transformation into a weeping stone." },
+      { "id": "philomela", "title": "Tereus, Procne, and @FILOMELA", "summary": "A brutal betrayal resulting in the transformation of three into birds." }
+    ]
+  },
+  {
+    "sikl": 7,
+    "book": 7,
+    "myths": [
+      { "id": "medea", "title": "Jason and @MEDEA", "summary": "Witchcraft, betrayal, and the quest for the Golden Fleece." },
+      { "id": "procris", "title": "Cephalus and @PROKRIS", "summary": "The tragic misunderstanding involving a magical spear." }
+    ]
+  },
+  {
+    "sikl": 8,
+    "book": 8,
+    "myths": [
+      { "id": "scylla_minos", "title": "@MINOS and Scylla", "summary": "Betrayal for love and transformation into a sea-bird." },
+      { "id": "meleager", "title": "@MELEAGER and the Calydonian Boar", "summary": "A heroic hunt followed by a family tragedy." },
+      { "id": "baucis", "title": "@BAVCIS and @FILEMON", "summary": "Hospitality rewarded by transformation into interlocking trees." }
+    ]
+  },
+  {
+    "sikl": 9,
+    "book": 9,
+    "myths": [
+      { "id": "hercules", "title": "@HERKVLES and Achelous", "summary": "The death and apotheosis of the greatest hero." },
+      { "id": "byblis", "title": "@BYBLIS", "summary": "Unrequited sibling love leads to transformation into a fountain." }
+    ]
+  },
+  {
+    "sikl": 10,
+    "book": 10,
+    "myths": [
+      { "id": "orpheus", "title": "@ORFEVS and Eurydice", "summary": "The failed attempt to retrieve a loved one from death." },
+      { "id": "pygmalion", "title": "@PYGMALION", "summary": "The artist who fell in love with his own creation." },
+      { "id": "adonis", "title": "@VENVS and @ADONIS", "summary": "The death of a beautiful youth and the birth of the anemone." }
+    ]
+  },
+  {
+    "sikl": 11,
+    "book": 11,
+    "myths": [
+      { "id": "midas", "title": "@MIDAS", "summary": "The golden touch and the ears of an ass." },
+      { "id": "ceyx", "title": "@CEYX and @ALKYONE", "summary": "Tragic shipwreck and transformation into kingfishers." }
+    ]
+  },
+  {
+    "sikl": 12,
+    "book": 12,
+    "myths": [
+      { "id": "achilles", "title": "The Death of @AKILLES", "summary": "The fall of the Greek hero during the Trojan War." },
+      { "id": "centaurs", "title": "The @CENTAVRS and Lapiths", "summary": "A brutal battle at a wedding feast." }
+    ]
+  },
+  {
+    "sikl": 13,
+    "book": 13,
+    "myths": [
+      { "id": "ajax", "title": "@AJAX and @VLYSSES", "summary": "The contest for the arms of Achilles." },
+      { "id": "galatea", "title": "@GALATEA and Polyphemus", "summary": "The giant's jealousy and the sea-nymph's love." }
+    ]
+  },
+  {
+    "sikl": 14,
+    "book": 14,
+    "myths": [
+      { "id": "aeneas", "title": "The Journey of @AENEAS", "summary": "The transition from Troy to the founding of Rome." },
+      { "id": "vertumnus", "title": "@VERTVMNVS and @POMONA", "summary": "The god of seasons wooing the goddess of fruit trees." }
+    ]
+  },
+  {
+    "sikl": 15,
+    "book": 15,
+    "myths": [
+      { "id": "pythagoras", "title": "The Doctrines of @PYTHAGORAS", "summary": "Philosophical teachings on universal change and metempsychosis." },
+      { "id": "caesar", "title": "The Apotheosis of Julius @CAESAR", "summary": "The transformation of a leader into a star." }
+    ]
+  }
+]
