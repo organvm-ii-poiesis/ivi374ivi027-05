@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Barlow_Condensed, Cormorant_Garamond, Space_Grotesk } from "next/font/google";
 
-import { LayoutTransition } from "@/components/layout-transition";
 import { ModeNav } from "@/components/mode-nav";
 import { PostHogBootstrap } from "@/components/posthog-bootstrap";
 import { MVSConsole } from "@/components/system/console";
@@ -78,7 +77,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </header>
 
         <main id="main-content">
-          <LayoutTransition>{children}</LayoutTransition>
+          {children}
         </main>
 
         <script
