@@ -70,6 +70,18 @@ jobs:
           name: data-integrity-report
           path: src/data/data-integrity-report.json
 
+  dependency-audit:
+    name: dependency-audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - run: npm audit --audit-level=low
+
   browser:
     if: github.event_name == 'push' || contains(github.event.pull_request.labels.*.name, 'e2e')
     uses: ./.github/workflows/e2e.yml
