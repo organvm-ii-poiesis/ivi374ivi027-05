@@ -10,7 +10,7 @@ Digital representation of Anthony James Padavano's MFA thesis project, implement
 - Playwright E2E
 
 ## System Dependencies
-Use Node.js 24, as selected by `.nvmrc` and required by `package.json`. CI and browser validation use the same runtime major. The committed `.npmrc` rejects unsupported engines and conflicting dependency peers.
+Use Node.js 24, as selected by `.nvmrc` and required by `package.json`. CI and browser validation read the same `.nvmrc` file. The committed `.npmrc` rejects unsupported engines and conflicting dependency peers.
 
 The content ingestion pipeline requires `pdftotext` (part of the Poppler library) to extract text from thesis PDFs.
 
@@ -102,7 +102,7 @@ If PostHog keys are missing, analytics responses remain valid and events are not
 
 ## CI/CD
 - `.github/workflows/ci.yml` runs lint, typecheck, unit/integration tests, and build.
-- `.github/workflows/e2e.yml` runs Playwright when PR has label `e2e`.
+- CI calls `.github/workflows/e2e.yml` at the same commit for PRs with the `e2e` label and for every push to `main`. Adding the label also starts CI. The reusable browser workflow runs both desktop Chromium and mobile WebKit tests.
 
 Recommended required status checks on `main`:
 - `lint`
