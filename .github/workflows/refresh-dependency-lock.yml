@@ -1,0 +1,101 @@
+name: Refresh dependency lockfile
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: Same-repository pull request to repair
+        required: true
+        type: string
+      expected_head:
+        description: Exact 40-character pull request head SHA
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dependency-lock-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: >-
+      github.repository_id == '1156295383' &&
+      github.actor == '4444J99' &&
+      github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pull-requests: read
+    env:
+      TARGET_PR: ${{ inputs.pr_number }}
+      EXPECTED_HEAD: ${{ inputs.expected_head }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - name: Verify exact open same-repository PR head
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          [[ "$TARGET_PR" =~ ^[1-9][0-9]*$ ]]
+          [[ "$EXPECTED_HEAD" =~ ^[0-9a-f]{40}$ ]]
+          test "$GITHUB_SHA" = "$EXPECTED_HEAD"
+          gh api "repos/$GITHUB_REPOSITORY/pulls/$TARGET_PR" > "$RUNNER_TEMP/lock-pr.json"
+          python3 - <<'PY'
+          import json, os
+          with open(os.environ['RUNNER_TEMP'] + '/lock-pr.json') as stream:
+              pr = json.load(stream)
+          assert pr['state'] == 'open' and not pr['merged'], 'PR is not open'
+          assert str(pr['head']['repo']['id']) == '1156295383', 'Wrong source repository'
+          assert pr['head']['sha'] == os.environ['EXPECTED_HEAD'], 'PR head moved'
+          assert 'refs/heads/' + pr['head']['ref'] == os.environ['GITHUB_REF'], 'Wrong branch'
+          assert pr['base']['ref'] == 'main', 'Unexpected base'
+          PY
+      - name: Regenerate, remediate, and verify lockfile without lifecycle scripts
+        env:
+          npm_config_engine_strict: 'true'
+          npm_config_strict_peer_deps: 'true'
+          npm_config_ignore_scripts: 'true'
+        run: |
+          set -euo pipefail
+          node --version
+          npm --version
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          # The first report records findings; the post-repair audit below is mandatory.
+          npm audit || true
+          npm audit fix --package-lock-only --ignore-scripts --no-fund
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm audit --audit-level=low
+          git diff --check
+          changes="$(git diff --name-only)"
+          test -z "$changes" || test "$changes" = package-lock.json
+      - name: Commit only the lockfile with a non-force head guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- package-lock.json; then
+            echo 'Lockfile is already reproducible and passes the dependency audit.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          live="$(gh api "repos/$GITHUB_REPOSITORY/pulls/$TARGET_PR" --jq '.head.sha')"
+          test "$live" = "$EXPECTED_HEAD"
+          test "$(gh api "repos/$GITHUB_REPOSITORY/pulls/$TARGET_PR" --jq '.state')" = open
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- package-lock.json
+          test "$(git diff --cached --name-only)" = package-lock.json
+          git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit -m 'fix(deps): regenerate and audit compatible dependency lockfile'
+          git -c credential.helper='!f() { echo username=x-access-token; echo "password=$GH_TOKEN"; }; f' push origin "HEAD:$GITHUB_REF"
+          echo "Lockfile commit: $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+          echo 'A fresh normal CI run on the resulting commit is still required; this job is not application validation.' >> "$GITHUB_STEP_SUMMARY"

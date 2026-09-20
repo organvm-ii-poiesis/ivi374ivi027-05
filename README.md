@@ -10,6 +10,8 @@ Digital representation of Anthony James Padavano's MFA thesis project, implement
 - Playwright E2E
 
 ## System Dependencies
+Use Node.js 24, as selected by `.nvmrc` and required by `package.json`. CI and browser validation read the same `.nvmrc` file. The committed `.npmrc` rejects unsupported engines and conflicting dependency peers.
+
 The content ingestion pipeline requires `pdftotext` (part of the Poppler library) to extract text from thesis PDFs.
 
 You can install it using the provided setup script:
@@ -47,21 +49,30 @@ Docs assembled in order:
 - `npm run content:nodes` builds `src/data/node-map.json` and `src/data/feed-items.json`
 - `npm run content:qa` writes `src/data/canonical-fidelity-report.json` and enforces <= 8% delta
 - `npm run content:integrity` writes `src/data/data-integrity-report.json` and verifies invariants
-- `npm run content:build` runs the full pipeline
+- `npm run content:build` rebuilds the core content, manifests, node data, and QA reports
+- `npm run content:build-full` additionally runs analysis, evolution, generation, export, and broadcast stages
 
-`npm run build` runs `content:build` before `next build`.
+`npm run build` runs `content:build-full` before `next build`.
 
 ## Local Development
+With nvm installed:
 ```bash
-npm install
+nvm install
+nvm use
+npm ci
 npm run dev
 ```
 
+Other Node version managers are supported as long as they select Node 24. Use `npm ci` for reproducible installation from the committed lockfile. Dependency updates must preserve peer compatibility; do not use `--force` or `--legacy-peer-deps` to hide conflicts.
+
 ## Verification
 ```bash
+npm ci
+npm audit --audit-level=low
 npm run lint
 npm run typecheck
 npm test
+npx playwright install --with-deps chromium webkit
 npm run test:e2e
 npm run build
 ```
@@ -70,6 +81,11 @@ Bundle profile:
 ```bash
 npm run build:analyze
 ```
+
+## Dependency Maintenance
+React and React DOM remain paired on 19.2 while Fiber 9.7 requires both below 19.3. ESLint remains on 9 and TypeScript on 6.0 to satisfy the peers of the installed Next lint tooling. Reassess these constraints together when upgrading their consumers; a newer version alone is not compatibility evidence.
+
+The owner-only `Refresh dependency lockfile` workflow supports manual regeneration for an open, same-repository PR. Select the PR branch and provide its number and exact 40-character head SHA. It verifies repository identity and head stability, disables dependency lifecycle scripts, enforces engine and peer requirements, applies only security fixes compatible with the manifest, and requires a successful post-fix audit. It commits only `package-lock.json` without force-pushing and does not run application validation or merge. A bot-generated lockfile commit still needs a fresh normal CI run on the resulting PR head.
 
 ## Environment
 Copy `.env.example` to `.env.local` and set:
@@ -86,14 +102,15 @@ If PostHog keys are missing, analytics responses remain valid and events are not
 - `GET /api/manifest/mirror`
 
 ## CI/CD
-- `.github/workflows/ci.yml` runs lint, typecheck, unit/integration tests, and build.
-- `.github/workflows/e2e.yml` runs Playwright when PR has label `e2e`.
+- `.github/workflows/ci.yml` runs lint, typecheck, unit/integration tests, build, and a full dependency audit that fails on low-or-higher advisories.
+- CI calls `.github/workflows/e2e.yml` at the same commit for PRs with the `e2e` label and for every push to `main`. Adding the label also starts CI. The reusable browser workflow runs both desktop Chromium and mobile WebKit tests.
 
 Recommended required status checks on `main`:
 - `lint`
 - `typecheck`
 - `unit-integration`
 - `build`
+- `dependency-audit`
 
 ## Launch Operations
 - Editorial checklist: `docs/content-editorial-checklist.md`
