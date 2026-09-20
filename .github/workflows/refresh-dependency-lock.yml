@@ -1,13 +1,6 @@
 name: Refresh dependency lockfile
 
 on:
-  push:
-    branches:
-      - dependabot/npm_and_yarn/npm-deps-62fd84ae7c
-    paths:
-      - .github/workflows/refresh-dependency-lock.yml
-      - package.json
-      - .nvmrc
   workflow_dispatch:
     inputs:
       pr_number:
@@ -38,8 +31,8 @@ jobs:
       contents: write
       pull-requests: read
     env:
-      TARGET_PR: ${{ github.event_name == 'push' && '59' || inputs.pr_number }}
-      EXPECTED_HEAD: ${{ github.event_name == 'push' && github.sha || inputs.expected_head }}
+      TARGET_PR: ${{ inputs.pr_number }}
+      EXPECTED_HEAD: ${{ inputs.expected_head }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
