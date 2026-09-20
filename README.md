@@ -68,6 +68,7 @@ Other Node version managers are supported as long as they select Node 24. Use `n
 ## Verification
 ```bash
 npm ci
+npm audit --audit-level=low
 npm run lint
 npm run typecheck
 npm test
@@ -84,7 +85,7 @@ npm run build:analyze
 ## Dependency Maintenance
 React and React DOM remain paired on 19.2 while Fiber 9.7 requires both below 19.3. ESLint remains on 9 and TypeScript on 6.0 to satisfy the peers of the installed Next lint tooling. Reassess these constraints together when upgrading their consumers; a newer version alone is not compatibility evidence.
 
-The owner-only `Refresh dependency lockfile` workflow supports manual regeneration for an open, same-repository PR. Select the PR branch and provide its number and exact 40-character head SHA. It verifies repository identity and head stability, disables dependency lifecycle scripts, enforces engine and peer requirements, and commits only `package-lock.json` without force-pushing. It does not run application validation or merge. A bot-generated lockfile commit still needs a fresh normal CI run on the resulting PR head.
+The owner-only `Refresh dependency lockfile` workflow supports manual regeneration for an open, same-repository PR. Select the PR branch and provide its number and exact 40-character head SHA. It verifies repository identity and head stability, disables dependency lifecycle scripts, enforces engine and peer requirements, applies only security fixes compatible with the manifest, and requires a successful post-fix audit. It commits only `package-lock.json` without force-pushing and does not run application validation or merge. A bot-generated lockfile commit still needs a fresh normal CI run on the resulting PR head.
 
 ## Environment
 Copy `.env.example` to `.env.local` and set:
@@ -101,7 +102,7 @@ If PostHog keys are missing, analytics responses remain valid and events are not
 - `GET /api/manifest/mirror`
 
 ## CI/CD
-- `.github/workflows/ci.yml` runs lint, typecheck, unit/integration tests, and build.
+- `.github/workflows/ci.yml` runs lint, typecheck, unit/integration tests, build, and a full dependency audit that fails on low-or-higher advisories.
 - CI calls `.github/workflows/e2e.yml` at the same commit for PRs with the `e2e` label and for every push to `main`. Adding the label also starts CI. The reusable browser workflow runs both desktop Chromium and mobile WebKit tests.
 
 Recommended required status checks on `main`:
@@ -109,6 +110,7 @@ Recommended required status checks on `main`:
 - `typecheck`
 - `unit-integration`
 - `build`
+- `dependency-audit`
 
 ## Launch Operations
 - Editorial checklist: `docs/content-editorial-checklist.md`
