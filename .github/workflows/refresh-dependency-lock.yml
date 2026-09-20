@@ -6,6 +6,8 @@ on:
       - dependabot/npm_and_yarn/npm-deps-62fd84ae7c
     paths:
       - .github/workflows/refresh-dependency-lock.yml
+      - package.json
+      - .nvmrc
   workflow_dispatch:
     inputs:
       pr_number:
