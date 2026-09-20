@@ -1,6 +1,11 @@
 name: Refresh dependency lockfile
 
 on:
+  push:
+    branches:
+      - dependabot/npm_and_yarn/npm-deps-62fd84ae7c
+    paths:
+      - .github/workflows/refresh-dependency-lock.yml
   workflow_dispatch:
     inputs:
       pr_number:
@@ -31,8 +36,8 @@ jobs:
       contents: write
       pull-requests: read
     env:
-      TARGET_PR: ${{ inputs.pr_number }}
-      EXPECTED_HEAD: ${{ inputs.expected_head }}
+      TARGET_PR: ${{ github.event_name == 'push' && '59' || inputs.pr_number }}
+      EXPECTED_HEAD: ${{ github.event_name == 'push' && github.sha || inputs.expected_head }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
@@ -61,7 +66,7 @@ jobs:
           assert 'refs/heads/' + pr['head']['ref'] == os.environ['GITHUB_REF'], 'Wrong branch'
           assert pr['base']['ref'] == 'main', 'Unexpected base'
           PY
-      - name: Regenerate and verify lockfile without dependency lifecycle scripts
+      - name: Regenerate, remediate, and verify lockfile without lifecycle scripts
         env:
           npm_config_engine_strict: 'true'
           npm_config_strict_peer_deps: 'true'
@@ -71,7 +76,11 @@ jobs:
           node --version
           npm --version
           npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          # The first report records findings; the post-repair audit below is mandatory.
+          npm audit || true
+          npm audit fix --package-lock-only --ignore-scripts --no-fund
           npm ci --ignore-scripts --no-audit --no-fund
+          npm audit --audit-level=low
           git diff --check
           changes="$(git diff --name-only)"
           test -z "$changes" || test "$changes" = package-lock.json
@@ -81,7 +90,7 @@ jobs:
         run: |
           set -euo pipefail
           if git diff --quiet -- package-lock.json; then
-            echo 'Lockfile is already reproducible.' >> "$GITHUB_STEP_SUMMARY"
+            echo 'Lockfile is already reproducible and passes the dependency audit.' >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
           live="$(gh api "repos/$GITHUB_REPOSITORY/pulls/$TARGET_PR" --jq '.head.sha')"
@@ -91,7 +100,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- package-lock.json
           test "$(git diff --cached --name-only)" = package-lock.json
-          git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit -m 'fix(deps): regenerate lockfile with supported peer and engine ranges'
+          git -c core.hooksPath=/dev/null -c commit.gpgsign=false commit -m 'fix(deps): regenerate and audit compatible dependency lockfile'
           git -c credential.helper='!f() { echo username=x-access-token; echo "password=$GH_TOKEN"; }; f' push origin "HEAD:$GITHUB_REF"
           echo "Lockfile commit: $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
           echo 'A fresh normal CI run on the resulting commit is still required; this job is not application validation.' >> "$GITHUB_STEP_SUMMARY"
