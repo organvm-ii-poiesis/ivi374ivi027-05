@@ -56,7 +56,13 @@ Docs assembled in order:
 - `npm run content:build` rebuilds the core content, manifests, node data, and QA reports
 - `npm run content:build-full` additionally runs analysis, evolution, generation, export, and broadcast stages
 
-`npm run build` runs `content:build-full` before `next build`.
+`npm run build` runs `content:build-full` before `next build --webpack`. Standalone production builds, bundle analysis, and the production browser server all use this same command.
+
+### Production bundler
+
+Production uses Next.js's supported [Webpack build option](https://nextjs.org/docs/app/api-reference/cli/next#next-build-options). After the successful #60 PR checks, fresh main run [35742409618](https://github.com/organvm-ii-poiesis/ivi374ivi027-05/actions/runs/35742409618) failed while the browser job built its production server: Turbopack rejected `next/font/google` queries for Space Grotesk with `next/font/google queries have exactly one entry`. The separate main build job passed, so the failure was not treated as proof that accepted-main validation was entirely green.
+
+The production command explicitly selects Webpack rather than retrying the failing bundler, removing fonts, or returning browser CI to a development server. The three original font families and weights remain unchanged. A browser regression loads each named custom font family and requires actual loaded font faces, not merely drawable fallback text. Development retains its existing `next dev` configuration. Removing the production flag requires separately verified build and browser evidence; a successful PR-only build is not sufficient evidence for that change.
 
 ## Local Development
 With nvm installed:
