@@ -2,6 +2,10 @@
 
 Digital representation of Anthony James Padavano's MFA thesis project, implemented as an immersive multi-mode web experience.
 
+## Activation Status
+
+The application is implemented and maintained with executable validation. Public-edition versus reference-only disposition remains owner-controlled in [issue #20](https://github.com/organvm-ii-poiesis/ivi374ivi027-05/issues/20). See [activation status and release boundary](docs/activation-status.md) for exact evidence, existing Pages hosting, and the unresolved publication/rights decision. Successful CI or a Jekyll Pages deployment is not a verified deployment of the Next.js application.
+
 ## Stack
 - Next.js 16 + TypeScript (App Router)
 - PostHog (client + server proxy)
@@ -73,9 +77,12 @@ npm run lint
 npm run typecheck
 npm test
 npx playwright install --with-deps chromium webkit
-npm run test:e2e
-npm run build
+CI=1 npm run test:e2e
 ```
+
+With `CI=1`, Playwright builds the full application and starts a fresh production server on port 3007. It refuses to reuse an existing server and runs desktop Chromium and mobile WebKit checks. The activation suite verifies every canonical reader, both manifest APIs, a real missing-reader 404, the about route, and actual PDF/Pages/Numbers/ZIP/DOCX downloads against their byte sizes and SHA-256 hashes. JSON results and download receipts are retained in the `production-browser-verification` CI artifact. A production server on the CI runner is not a public deployment.
+
+Without `CI`, `npm run test:e2e` retains the local development-server workflow. Run `npm run build` independently for the full build and content QA reports.
 
 Bundle profile:
 ```bash
@@ -98,12 +105,13 @@ If PostHog keys are missing, analytics responses remain valid and events are not
 
 ## APIs
 - `POST /api/analytics`
-- `GET /api/manifest/canonical`
-- `GET /api/manifest/mirror`
+- `GET /api/manifest/canonical`: JSON array of ordered `id`, `slug`, `title`, `order`, `wordCount`, `sectionCount`, and `readerUrl` metadata. Manuscript bodies and local file paths are excluded.
+- `GET /api/manifest/mirror`: JSON array of existing archive `id`, `fileName`, `ext`, `sizeBytes`, `downloadUrl`, and `sha256` metadata.
 
 ## CI/CD
-- `.github/workflows/ci.yml` runs lint, typecheck, unit/integration tests, build, and a full dependency audit that fails on low-or-higher advisories.
-- CI calls `.github/workflows/e2e.yml` at the same commit for PRs with the `e2e` label and for every push to `main`. Adding the label also starts CI. The reusable browser workflow runs both desktop Chromium and mobile WebKit tests.
+- `.github/workflows/ci.yml` runs lint, typecheck, unit/integration tests, build, and a full dependency audit that fails on low-or-higher advisories. The audit also records the checked commit and lockfile digest/version inventory.
+- CI calls `.github/workflows/e2e.yml` at the same commit for PRs with the `e2e` label and for every push to `main`. Adding the label also starts CI.
+- `stale-preview` exercises the upgraded stale action with a read-only token and dry-run mode. Scheduled stewardship labels inactivity without automatically closing issues/PRs or deleting branches.
 
 Recommended required status checks on `main`:
 - `lint`
@@ -113,10 +121,11 @@ Recommended required status checks on `main`:
 - `dependency-audit`
 
 ## Launch Operations
+- Activation evidence and owner disposition: [docs/activation-status.md](docs/activation-status.md)
 - Editorial checklist: `docs/content-editorial-checklist.md`
 - Launch QA + rollback checklist: `docs/launch-qa.md`
 
-All thesis artifacts are mirrored under `public/mirror` and exposed at `/mirror/**`.
+All thesis artifacts are mirrored under `public/mirror` and exposed at `/mirror/**` when the application is served. The inputs are preserved; their presence is not new publication authorization.
 
 <!-- SYSTEM-NAV-START -->
 

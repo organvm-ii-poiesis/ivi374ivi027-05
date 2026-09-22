@@ -12,6 +12,10 @@ import { ScrollMemory } from "@/components/scroll-memory";
 import { getCanonicalDocBySlug, getCanonicalManifest } from "@/lib/content";
 import type { CommentaryEntry } from "@/types/content";
 
+// The build-time canonical manifest is the complete reader route inventory.
+// Reject unknown slugs before a streamed response commits HTTP 200 headers.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getCanonicalManifest().map((doc) => ({ docSlug: doc.slug }));
 }
@@ -50,11 +54,12 @@ async function getCommentary(docSlug: string): Promise<CommentaryEntry[]> {
 export default async function ReadDocPage({ params }: Props) {
   const { docSlug } = await params;
   const doc = await getCanonicalDocBySlug(docSlug);
-  const commentary = await getCommentary(docSlug);
 
   if (!doc) {
     notFound();
   }
+
+  const commentary = await getCommentary(docSlug);
 
   return (
     <>

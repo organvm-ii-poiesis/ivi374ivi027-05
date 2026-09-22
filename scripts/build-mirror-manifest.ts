@@ -2,6 +2,8 @@ import { createHash } from "node:crypto";
 import { readFile, readdir, stat, writeFile } from "node:fs/promises";
 import { join, relative, sep } from "node:path";
 
+import { buildMirrorDownloadUrl } from "../src/lib/mirror-url";
+
 type AssetExtension =
   | "pdf"
   | "pages"
@@ -111,7 +113,7 @@ async function run() {
       sizeBytes: fileStat.size,
       modifiedAt: fileStat.mtime.toISOString(),
       sourceFolder: parts[0] ?? "",
-      downloadUrl: `/mirror/${encodeURI(relPath)}`,
+      downloadUrl: buildMirrorDownloadUrl(relPath),
       sha256: await checksum(filePath),
     });
   }
