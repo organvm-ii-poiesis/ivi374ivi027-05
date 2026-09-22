@@ -9,13 +9,15 @@ permissions:
 jobs:
   stale:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/stale@v11
         with:
-          stale-issue-message: 'Marked stale due to inactivity. Will close in 14 days.'
-          stale-pr-message: 'Marked stale due to inactivity. Will close in 14 days.'
+          stale-issue-message: 'Marked stale for review. This issue will not be automatically closed.'
+          stale-pr-message: 'Marked stale for review. This pull request will not be automatically closed.'
           days-before-stale: 60
           days-before-close: -1
+          delete-branch: false
           exempt-issue-labels: 'pinned,evergreen,omega,blocked'
           exempt-pr-labels: 'pinned,evergreen,work-in-progress'
           stale-issue-label: 'stale'
