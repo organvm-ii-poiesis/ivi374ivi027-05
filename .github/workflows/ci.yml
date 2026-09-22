@@ -10,6 +10,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   lint:
     name: lint
@@ -80,7 +84,50 @@ jobs:
         with:
           node-version-file: .nvmrc
           package-manager-cache: false
+      - name: Record exact dependency inventory
+        run: |
+          node <<'NODE'
+          const { readFileSync, appendFileSync } = require('node:fs');
+          const { createHash } = require('node:crypto');
+          const source = readFileSync('package-lock.json', 'utf8');
+          const lock = JSON.parse(source);
+          const tracked = new Set(['nanoid', 'dompurify', '@humanfs/node', 'fflate', 'ws', 'postcss', 'next', '@tailwindcss/postcss']);
+          const lines = [
+            `Checked commit: ${process.env.GITHUB_SHA}`,
+            `Lockfile SHA-256: ${createHash('sha256').update(source).digest('hex')}`,
+            '', '| Installed path | Locked version |', '| --- | --- |',
+          ];
+          for (const [path, entry] of Object.entries(lock.packages)) {
+            if (tracked.has(path.split('node_modules/').pop())) {
+              lines.push(`| ${path} | ${entry.version} |`);
+            }
+          }
+          const report = lines.join('\n') + '\n';
+          console.log(report);
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY, report);
+          NODE
       - run: npm audit --audit-level=low
+
+  stale-preview:
+    name: stale-preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      issues: read
+      pull-requests: read
+    steps:
+      - uses: actions/stale@v11
+        with:
+          debug-only: true
+          days-before-stale: 60
+          days-before-close: -1
+          delete-branch: false
+          stale-issue-message: 'Marked stale for review. This issue will not be automatically closed.'
+          stale-pr-message: 'Marked stale for review. This pull request will not be automatically closed.'
+          exempt-issue-labels: 'pinned,evergreen,omega,blocked'
+          exempt-pr-labels: 'pinned,evergreen,work-in-progress'
+          stale-issue-label: 'stale'
+          stale-pr-label: 'stale'
 
   browser:
     if: github.event_name == 'push' || contains(github.event.pull_request.labels.*.name, 'e2e')
