@@ -89,6 +89,36 @@ for (const ext of ["pdf", "pages", "numbers", "zip", "docx"] as const) {
   });
 }
 
+for (const character of ["@", "#"] as const) {
+  test(`archive filenames containing ${character} retain their exact downloadable bytes`, async ({ request }, testInfo) => {
+    const response = await request.get("/api/manifest/mirror");
+    expect(response.status()).toBe(200);
+    const assets: MirrorEntry[] = await response.json();
+    const asset = assets.filter((entry) => entry.fileName.includes(character))
+      .sort((a, b) => a.sizeBytes - b.sizeBytes)[0];
+    expect(asset, `Missing ${character} filename regression fixture`).toBeDefined();
+    if (!asset) throw new Error(`No archive filename containing ${character}`);
+    const url = new URL(asset.downloadUrl, "http://localhost:3007");
+    expect(url.search).toBe("");
+    expect(url.hash).toBe("");
+    expect(decodeURIComponent(url.pathname)).toContain(asset.fileName);
+    expect(asset.downloadUrl).toContain(encodeURIComponent(character));
+
+    const download = await request.get(asset.downloadUrl, { maxRedirects: 0 });
+    expect(download.status(), asset.downloadUrl).toBe(200);
+    const bytes = await download.body();
+    expect(bytes.length).toBeGreaterThan(0);
+    expect(bytes.length).toBe(asset.sizeBytes);
+    const digest = createHash("sha256").update(bytes).digest("hex");
+    expect(digest).toBe(asset.sha256);
+    await testInfo.attach(`encoded-filename-${character.charCodeAt(0)}-receipt`, {
+      body: Buffer.from(JSON.stringify({ downloadUrl: asset.downloadUrl, sizeBytes: bytes.length, sha256: digest }, null, 2)),
+      contentType: "application/json",
+    });
+    await download.dispose();
+  });
+}
+
 test("an unknown canonical reader is a real 404", async ({ request }) => {
   const response = await request.get("/read/not-a-canonical-document-activation-check");
   expect(response.status()).toBe(404);
