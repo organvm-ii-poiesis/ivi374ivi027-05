@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "npm run content:build-full && next build",
+    "build": "npm run content:build-full && next build --webpack",
     "build:analyze": "ANALYZE=true npm run build",
     "start": "next start",
     "lint": "eslint .",
