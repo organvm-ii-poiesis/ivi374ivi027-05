@@ -8,7 +8,7 @@ This is an implemented Next.js application, not a documentation-only shell. The 
 
 Accepted baseline: [#59](https://github.com/organvm-ii-poiesis/ivi374ivi027-05/pull/59), commit `1dcf4af535ea81dec7f5cee593d58e322c68abf3`, with [fresh main CI](https://github.com/organvm-ii-poiesis/ivi374ivi027-05/actions/runs/35537682117). Subsequent Actions upgrade: [#39](https://github.com/organvm-ii-poiesis/ivi374ivi027-05/pull/39), commit `521e8df666422822bea816e02738e6a8f1f0b301`, with [seven successful main validation jobs](https://github.com/organvm-ii-poiesis/ivi374ivi027-05/actions/runs/35738243269).
 
-The activation-verification change adds the two documented manifest handlers and regression tests. It makes CI run Playwright against a fresh `next build` / `next start` server, without reusing a development server. Its own PR and accepted-main run, not the earlier baseline runs, are the evidence for these new checks. See the completion receipt on issue #20 for the exact accepted revision and results.
+[Activation-verification PR #60](https://github.com/organvm-ii-poiesis/ivi374ivi027-05/pull/60) adds the two documented manifest handlers and regression tests. It makes CI run Playwright against a fresh `next build` / `next start` server, without reusing a development server. Its own PR and accepted-main run, not the earlier baseline runs, are the evidence for these new checks. See the completion receipt on issue #20 for the exact accepted revision and results.
 
 | Surface | Automated verification |
 | --- | --- |
@@ -19,10 +19,19 @@ The activation-verification change adds the two documented manifest handlers and
 | Canonical manifest API | Ordered metadata; no manuscript bodies or local file paths |
 | Mirror manifest API | All existing archive entries; download URLs, byte sizes and SHA-256 |
 | PDF, Pages, Numbers, ZIP, DOCX | One nonempty representative per format downloaded over HTTP; exact size and SHA-256 comparison |
+| Special-character filenames | Real `@` and `#` downloads verified over HTTP with byte counts and SHA-256; unit tests additionally cover query delimiters, percent signs, spaces, punctuation and Unicode |
 | Analytics without keys | Existing integration tests; no claim that configured events reach a remote PostHog project |
 | Source fidelity / integrity | Full content build and generated QA artifacts |
 
 The browser job retains `production-browser-verification`, including per-download receipts. Passing representative downloads is not an exhaustive human rights review or a test of every archive file. No canonical input under `public/mirror/**` is modified by this work.
+
+### Production defects exposed and repaired
+
+The first production run, [35739239640](https://github.com/organvm-ii-poiesis/ivi374ivi027-05/actions/runs/35739239640), passed 24 browser cases and failed four: two distinct defects reproduced in both browser projects. A `.pages` URL containing `@` returned 404, and an unknown canonical reader returned a streamed HTTP 200 instead of 404. The failures were retained as regression assertions, not waived or redirected to different fixtures.
+
+The archive generator now encodes each path segment with `encodeURIComponent`, matching Next.js public-file indexing and preventing `#` or `?` from becoming URL fragments or query strings. The shared encoder has a checked-in manifest consistency test. Reader routes set `dynamicParams = false` because the canonical manifest is their complete build-time inventory, rejecting unknown slugs before response streaming.
+
+[Metadata repair run 35740625172](https://github.com/organvm-ii-poiesis/ivi374ivi027-05/actions/runs/35740625172) synchronized the stored manifest's URL fields and committed only `src/data/mirror-manifest.json` as `62a64d22f5c269f3aa02cb27fa2ded0f22594402`. It asserted that every other metadata field was unchanged: source paths, IDs, checksums, sizes, timestamps and order were preserved. The repaired generator handles subsequent full builds. The owner-only `Refresh mirror URL metadata` workflow is retained for manual exact-head repairs on open same-repository PR branches; its bootstrap push trigger is retired. It uses no dependency installation, does not modify source assets, and cannot substitute for normal CI or authorize a merge/deployment.
 
 ## Existing hosting: evidence is not interchangeable
 
