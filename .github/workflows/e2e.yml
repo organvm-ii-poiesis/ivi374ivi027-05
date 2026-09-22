@@ -20,6 +20,13 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - run: npx playwright install --with-deps chromium webkit
       - run: npm run test:e2e
+      - name: Upload production browser verification report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: production-browser-verification
+          path: test-results/results.json
+          if-no-files-found: error
       - name: Upload Playwright traces on failure
         if: failure()
         uses: actions/upload-artifact@v7
