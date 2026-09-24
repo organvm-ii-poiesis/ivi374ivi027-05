@@ -6,9 +6,33 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 3
+    labels: ["dependencies", "e2e"]
+    # Keep routine upgrades together; unrelated major upgrades remain separate PRs.
     groups:
       npm-deps:
         patterns: ["*"]
+        update-types: ["minor", "patch"]
+    # These are consumer compatibility limits, not blanket dependency ignores.
+    # Remove a limit only with the consumer/runtime migration and passing full CI.
+    # See docs/dependency-maintenance.md and PRs #59/#62 for the evidence.
+    ignore:
+      # Fiber 9.7.0 requires React/DOM >=19 <19.3; keep their types aligned.
+      - dependency-name: "react"
+        versions: [">=19.3.0"]
+      - dependency-name: "react-dom"
+        versions: [">=19.3.0"]
+      - dependency-name: "@types/react"
+        versions: [">=19.3.0"]
+      - dependency-name: "@types/react-dom"
+        versions: [">=19.3.0"]
+      # The application and CI run Node 24, not Node 26.
+      - dependency-name: "@types/node"
+        versions: [">=25.0.0"]
+      # The retained Next lint plugins support ESLint 9 and TypeScript <6.1.
+      - dependency-name: "eslint"
+        versions: [">=10.0.0"]
+      - dependency-name: "typescript"
+        versions: [">=6.1.0"]
   - package-ecosystem: "github-actions"
     directories:
       - "/"
