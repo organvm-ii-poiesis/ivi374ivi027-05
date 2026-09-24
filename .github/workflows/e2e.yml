@@ -20,6 +20,17 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - run: npx playwright install --with-deps chromium webkit
       - run: npm run test:e2e
+      - name: Upload verified runtime candidate
+        uses: actions/upload-artifact@v7
+        with:
+          name: verified-runtime-candidate
+          path: |
+            .release/met4morfoses-runtime.tar.gz
+            .release/met4morfoses-runtime.tar.gz.sha256
+            .release/release-candidate.json
+          if-no-files-found: error
+          retention-days: 14
+          include-hidden-files: true
       - name: Upload production browser verification report
         if: always()
         uses: actions/upload-artifact@v7
