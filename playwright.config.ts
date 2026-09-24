@@ -16,14 +16,14 @@ export default defineConfig({
     ? [["list"], ["json", { outputFile: "test-results/results.json" }]]
     : "list",
   use: {
-    baseURL: `http://localhost:${PORT}`,
+    baseURL: `http://127.0.0.1:${PORT}`,
     trace: "retain-on-failure",
   },
   webServer: {
     command: isCI
-      ? `npm run build && npm run start -- --port ${PORT}`
+      ? `PORT=${PORT} bash scripts/run-release-preview.sh`
       : `npm run dev -- --port ${PORT}`,
-    url: `http://localhost:${PORT}`,
+    url: `http://127.0.0.1:${PORT}`,
     timeout: 240_000,
     reuseExistingServer: !isCI,
   },
